@@ -32,7 +32,7 @@ dependencies:
     sdk: flutter
 
 
-
+  iconify_flutter: ^0.0.5
   animated_splash_screen: ^1.3.0
   cupertino_icons: ^1.0.2
 
