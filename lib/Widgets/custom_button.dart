@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
       required this.onpress,
       this.buttonText,
       this.buttonColor,
-      this.fontSize = 16,
+      this.fontSize,
       this.centerText,
       this.textColor = ProjectColors.white,
        this.padding = const EdgeInsets.symmetric(vertical: 25),
@@ -24,19 +24,21 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(onPressed: onpress,
-    child: Container(
+    child:
+    Container(
       alignment: Alignment.center,
       padding: padding,
-         decoration: BoxDecoration(
-          color: buttonColor,
-         ),
-         child: Text(buttonText,
+     decoration: BoxDecoration(
+      color: buttonColor
+     ),
+        child: Text(buttonText,
          style: TextStyle(color: textColor,
          fontSize: fontSize,
-         fontWeight: FontWeight.w500
+        fontWeight: FontWeight.w500
          ),
          ),
     ),
+    
     );
   }
 }
