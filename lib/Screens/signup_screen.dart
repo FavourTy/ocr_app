@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
 import 'package:orc_application/Screens/homepage.dart';
+import 'package:orc_application/Screens/login_screen.dart';
 import 'package:orc_application/Styles/colors.dart';
 import 'package:orc_application/Widgets/custom_button.dart';
 
@@ -19,6 +20,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _usernameController = TextEditingController();
   bool showPassword = false;
+  bool isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,7 +55,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   top: 20.0,
                   bottom: 15.0,
                 ),
-                child: Text("Create Account"),
+                child: Text(
+                  "Create Account",
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
@@ -73,7 +78,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 padding: EdgeInsets.symmetric(
                                   vertical: 10.0,
                                 ),
-                                child: Text("Username"),
+                                child: Text(
+                                  "Username",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                  ),
+                                ),
                               ),
                               Container(
                                 padding: const EdgeInsets.all(8.0),
@@ -102,7 +112,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 padding: EdgeInsets.symmetric(
                                   vertical: 10.0,
                                 ),
-                                child: Text("Email"),
+                                child: Text(
+                                  "Email",
+                                  style: TextStyle(
+                                    fontSize: 25,
+                                  ),
+                                ),
                               ),
                               Container(
                                 padding: const EdgeInsets.all(8.0),
@@ -162,6 +177,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                         ),
                         Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          child: Row(
+                            children: [
+                              Checkbox(
+                                activeColor: ProjectColors.black,
+                                  value: isChecked,
+                                  onChanged: (bool? value) {
+                                    setState(() {
+                                      isChecked = value!;
+                                    });
+                                  }),
+                                  Text("I accept the terms and privacy policy")
+                            ],
+                          ),
+                        ),
+                        Padding(
                           padding: const EdgeInsets.symmetric(vertical: 10.0),
                           child: CustomButton(
                             onpress: () {
@@ -177,18 +208,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ],
                     )),
               ),
-              const Row(children: [
-                Text("Forgot password?"),
+              Row(children: [
+                Text("Already have an account?"),
                 Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Text("Reset Here"))
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            CupertinoPageRoute(
+                                builder: ((context) => LoginScreen())));
+                      },
+                      child: Text(
+                        "SignUp",
+                        style: TextStyle(
+                          color: ProjectColors.pink,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ))
               ]),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 15.0,
-                ),
-                child: Text("Already have an account ?"),
-              )
             ],
           ),
         ),
