@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:orc_application/Screens/homepage.dart';
 import 'package:orc_application/Screens/login_options.dart';
 import 'package:orc_application/Styles/colors.dart';
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class SplashScreen extends StatefulWidget {

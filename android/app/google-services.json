@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "939709975569",
+    "project_id": "orc-app-3f68b",
+    "storage_bucket": "orc-app-3f68b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939709975569:android:82ddfb67d897012a8275b0",
+        "android_client_info": {
+          "package_name": "com.example.orc_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSa1RZiHArdTicAK_7Yz02Jwwvz9dYsYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

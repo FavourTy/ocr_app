@@ -29,7 +29,12 @@ class _LoginOptionScreenState extends State<LoginOptionScreen> {
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Text("Welcome to orc"),
+                  child: Text("Welcome to orc",
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold
+                  ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
@@ -37,7 +42,7 @@ class _LoginOptionScreenState extends State<LoginOptionScreen> {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => const LoginScreen()));
+                            builder: (context) => const SignUpScreen()));
                   },
                   buttonColor: ProjectColors.pink,
                   buttonText: "Create an account",
@@ -49,7 +54,7 @@ class _LoginOptionScreenState extends State<LoginOptionScreen> {
                     Navigator.push(
                         context,
                         CupertinoPageRoute(
-                            builder: (context) => const SignUpScreen()));
+                            builder: (context) => const LoginScreen()));
                   },
                   buttonColor: ProjectColors.pink,
                   buttonText: "Login",
