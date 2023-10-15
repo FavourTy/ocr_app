@@ -24,6 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       backgroundColor: ProjectColors.white,
       appBar: AppBar(
+        backgroundColor: ProjectColors.white,
         automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -33,7 +34,9 @@ class _LoginScreenState extends State<LoginScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Icon(Icons.arrow_back_ios),
+              child: const Icon(Icons.arrow_back_ios,
+              color: ProjectColors.black,
+              ),
             )
           ],
         ),
@@ -53,7 +56,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   top: 20.0,
                   bottom: 15.0,
                 ),
-                child: Text("Sign In"),
+                child: Text("Sign In",
+                style: TextStyle(
+                  fontSize: 30, fontWeight: FontWeight.bold
+                ),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
@@ -73,7 +80,12 @@ class _LoginScreenState extends State<LoginScreen> {
                                 padding: EdgeInsets.symmetric(
                                   vertical: 10.0,
                                 ),
-                                child: Text("Username"),
+                                child: Text("Username",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold
+                                  ),
+                                ),
                               ),
                               Container(
                                 padding: const EdgeInsets.all(8.0),
@@ -82,8 +94,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   decoration: const InputDecoration(
                                     hintText: "Your Username",
                                     focusedBorder: UnderlineInputBorder(
+          
                                         borderSide: BorderSide(
-                                      width: 2,
+                                      width: 1,
                                     )),
                                   ),
                                 ),
@@ -101,18 +114,24 @@ class _LoginScreenState extends State<LoginScreen> {
                                 padding: EdgeInsets.symmetric(
                                   vertical: 10.0,
                                 ),
-                                child: Text("Password"),
+                                child: Text("Password",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                    fontSize: 17,
+                                  ),
+                                ),
                               ),
                               Container(
                                 padding: const EdgeInsets.all(8.0),
                                 height: 50.0,
                                 child: TextFormField(
                                   decoration: InputDecoration(
-                                    focusedBorder: const UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        width: 2,
-                                      ),
-                                    ),
+                                    hintText: "password",
+                                    focusedBorder: UnderlineInputBorder(
+          
+                                        borderSide: BorderSide(
+                                      width: 1,
+                                    )),
                                     suffixIcon: IconButton(
                                         onPressed: () {
                                           setState(() {
@@ -142,15 +161,17 @@ class _LoginScreenState extends State<LoginScreen> {
                                       isChecked = value!;
                                     });
                                   }),
-                              const Text("Remember me"),
-                              GestureDetector(
+                                  const Text("Remember me"),
+                                  SizedBox(width: 150,),
+                                  GestureDetector(
                                 onTap: () {
                                   Navigator.push(
                                       context,
                                       CupertinoPageRoute(
                                           builder: (context) =>
-                                              ResetPasswordPage()));
+                                              const ResetPasswordPage()));
                                 },
+                                
                                 child: const Text(
                                   "Forgot Password ?",
                                   style: TextStyle(
@@ -158,6 +179,9 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 ),
                               )
+                              
+                              
+                              
                             ],
                           ),
                         ),
@@ -177,18 +201,20 @@ class _LoginScreenState extends State<LoginScreen> {
                       ],
                     )),
               ),
-              const Row(children: [
-                Text("Forgot password?"),
+               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                const Text("Dont have an account?"),
                 Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Text("Reset Here"))
+                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Text("Sign in",
+                    style: TextStyle(
+                      color: ProjectColors.pink,
+                      fontWeight: FontWeight.bold
+                    ),
+                    ))
               ]),
-              const Padding(
-                padding: EdgeInsets.symmetric(
-                  vertical: 15.0,
-                ),
-                child: Text("Don't have an account ?"),
-              )
+             
             ],
           ),
         ),

@@ -8,9 +8,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(App());
+  runApp(const App());
 }
-
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -18,10 +17,13 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
+      theme: ThemeData(useMaterial3: true),
+      home: const SplashScreen(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
+
 class Home extends StatefulWidget {
   const Home({super.key});
 

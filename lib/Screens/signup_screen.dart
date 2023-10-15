@@ -35,7 +35,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Icon(Icons.arrow_back_ios),
+              child: const Icon(Icons.arrow_back_ios,
+              color: ProjectColors.black,
+              ),
             )
           ],
         ),
@@ -80,8 +82,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 ),
                                 child: Text(
                                   "Username",
+                                  
                                   style: TextStyle(
-                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 17,
                                   ),
                                 ),
                               ),
@@ -94,7 +98,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                     hintText: "Your Username",
                                     focusedBorder: UnderlineInputBorder(
                                         borderSide: BorderSide(
-                                      width: 2,
+                                      width: 1,
                                     )),
                                   ),
                                 ),
@@ -115,7 +119,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 child: Text(
                                   "Email",
                                   style: TextStyle(
-                                    fontSize: 25,
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ),
@@ -127,8 +132,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                   decoration: const InputDecoration(
                                     hintText: "Your Email",
                                     focusedBorder: UnderlineInputBorder(
+          
                                         borderSide: BorderSide(
-                                      width: 2,
+                                      width: 1,
                                     )),
                                   ),
                                 ),
@@ -146,7 +152,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 padding: EdgeInsets.symmetric(
                                   vertical: 10.0,
                                 ),
-                                child: Text("Password"),
+                                child: Text("Password",
+                                style: TextStyle(
+                                    fontSize: 17,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                               Container(
                                 padding: const EdgeInsets.all(8.0),
@@ -154,11 +165,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 child: TextFormField(
                                   controller: _passwordController,
                                   decoration: InputDecoration(
+                                    hintText: "password",
                                     focusedBorder: const UnderlineInputBorder(
-                                      borderSide: BorderSide(
-                                        width: 2,
-                                      ),
-                                    ),
+          
+                                        borderSide: BorderSide(
+                                      width: 1,
+                                    )),
                                     suffixIcon: IconButton(
                                         onPressed: () {
                                           setState(() {
@@ -177,7 +189,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                         ),
                         Padding(
-                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          padding: const EdgeInsets.symmetric(vertical: 15.0),
                           child: Row(
                             children: [
                               Checkbox(
@@ -188,7 +200,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                       isChecked = value!;
                                     });
                                   }),
-                                  Text("I accept the terms and privacy policy")
+                                  const Text("I accept the terms and privacy policy")
                             ],
                           ),
                         ),
@@ -208,26 +220,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ],
                     )),
               ),
-              Row(children: [
-                Text("Already have an account?"),
-                Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            CupertinoPageRoute(
-                                builder: ((context) => LoginScreen())));
-                      },
-                      child: Text(
-                        "SignUp",
-                        style: TextStyle(
-                          color: ProjectColors.pink,
-                          fontWeight: FontWeight.bold,
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                  const Text("Already have an account?"),
+                  Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              CupertinoPageRoute(
+                                  builder: ((context) => const LoginScreen())));
+                        },
+                        child: Text(
+                          "SignUp",
+                          style: TextStyle(
+                            color: ProjectColors.pink,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                    ))
-              ]),
+                      ))
+                ]),
+              ),
             ],
           ),
         ),
