@@ -34,7 +34,7 @@ Future<String> imageCropperView(String? path, BuildContext context) async {
   // ignore: unnecessary_null_comparison
   if (croppedFile != null) {
     return croppedFile.path;
-    // Navigator.push(context, CupertinoPageRoute(builder: (context)=>RecognitionStage(path:croppedFile!.path)));
+  //Navigator.push(context, CupertinoPageRoute(builder: (context)=>RecognitionStage(path:croppedFile!.path)));
   } else {
     print("Do nothing");
     return "";
