@@ -29,7 +29,7 @@ class _LoginOptionScreenState extends State<LoginOptionScreen> {
               children: [
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),
-                  child: Text("Welcome to orc",
+                  child: Text("Welcome to Optical recognition app",
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold
