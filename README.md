@@ -31,7 +31,7 @@ Once Flutter is set up, follow these steps:
    flutter run
 
   
-## Contributing:
+## Contributing
 We welcome contributions! If you'd like to enhance this OCR app, please feel free to open issues, create pull requests, or suggest improvements. Together, we can make this OCR app even better.
 
 ## Assumptions
