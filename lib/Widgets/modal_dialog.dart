@@ -19,7 +19,7 @@ void imagePickerModalSheet(
                 child: Card(
                   child: Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(color: ProjectColors.pink),
                     child: const Text(
                       "Camera",
@@ -34,7 +34,7 @@ void imagePickerModalSheet(
                 child: Card(
                   child: Container(
                     alignment: Alignment.center,
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(color: ProjectColors.pink),
                     child: const Text(
                       "Gallery",
