@@ -1,16 +1,40 @@
-# orc_application
+# ocr_application
 
-A new Flutter project.
+ This Flutter-based OCR app allows users to extract text from images effortlessly. With its intuitive interface and powerful functionality, it simplifies the process of extracting text from images, enhancing user convenience and productivity.
 
-## Getting Started
+## Features
+* Text Extraction
+* Image Cropping
+* Image Source Selection
 
-This project is a starting point for a Flutter application.
+## How to use 
+* Select Image: Choose an image from your camera or gallery that contains the text you want to extract.
+* Crop Image : Crop the selected image to focus on the specific text you want to extract. This step ensures accurate results.
+* Extract Text: The app processes the selected or cropped image, extracting the text present in the image.
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+To run this project on your local machine, you'll need to have Flutter installed. If you haven't already, you can follow the Flutter installation guide for your platform.
+Once Flutter is set up, follow these steps:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/favourTy/ocr_app.git
+2. Navigate to the project directory:
+   ```bash
+3. Install project dependencies:
+   ```bash
+   flutter pub get
+4. Run the app:
+   ```bash
+   flutter run
+
+  
+## Contributing:
+We welcome contributions! If you'd like to enhance this OCR app, please feel free to open issues, create pull requests, or suggest improvements. Together, we can make this OCR app even better.
+
+## Assumptions
+This project assumes that you have Flutter and its dependencies installed on your development machine.
+
+
